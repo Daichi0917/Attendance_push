@@ -1,8 +1,9 @@
+<!-- 確認済み -->
 <% provide(:title, "ユーザ一覧") %>
 
 <h1>ユーザ一覧</h1>
 <div class="csv_holder">
-  <%= form_tag import_users_path, multipart: true do %>
+  <%= form_tag import_users_path, multipart: true do %>  <!-- mulipart 複数の種類のデータを一度に扱える形式 -->
     <div><%= file_field_tag :file, class: "file-csv" %></div>
     <div><%= submit_tag "CSVをインポート", class: "btn btn-block btn-primary" %></div>
   <% end %>
